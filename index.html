@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Investieren in Bexbach – Exposé & Beratung | Thamke GmbH</title>
+<meta name="description" content="Kapitalanlage Quartier 6 in Bexbach – Fertigstellung 2026. Moderne Einheiten, sichere Vermietbarkeit, steuerliche Vorteile. Jetzt Exposé anfordern.">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --brand:#054c84; --brand-2:#0a64a5; --accent:#62bb47;
+    --ink:#0a1b2d; --muted:#3f4d5c; --card:#ffffff; --bg:#f1f5f9; --grid:rgba(5,76,132,.07);
+    --btnGrad:linear-gradient(180deg,var(--brand-2),var(--brand));
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);font-family:"Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink)}
+  img{max-width:100%;display:block;height:auto}
+  a{text-decoration:none;color:inherit}
+
+  /* STARRE MOBILE SPALTE */
+  .page{max-width:560px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 10px 40px rgba(0,0,0,.08);min-height:100dvh;position:relative}
+  .container{padding:20px}
+
+  /* Subtiles Grid */
+  .bg-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(90deg,var(--grid) 1px,transparent 1px),linear-gradient(var(--grid) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(70% 55% at 50% 20%,#000 60%,transparent 100%)}
+
+  /* ===== HEADER (#054c84 Vollfläche) ===== */
+  .header{position:sticky;top:0;z-index:30;background:#054c84}
+  .header .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo-badge{display:grid;place-items:center;background:transparent;border-radius:12px;padding:0}
+  .logo{width:96px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.25))}
+  .loc{color:#cfe9ff;font-weight:700;font-size:12px}
+  .link-site{color:#e7f3ff;font-weight:800;font-size:12px;opacity:.92;border:1px solid rgba(255,255,255,.25);padding:6px 10px;border-radius:999px}
+  .link-site:hover{opacity:1}
+
+  /* ===== HERO ===== */
+  .hero{text-align:center;padding:18px}
+  .h1-wrap{display:inline-block}
+  .slab{display:inline-block;border:2px solid var(--brand);background:var(--brand);color:#fff;border-radius:14px;padding:.32em .46em;box-shadow:0 12px 26px rgba(5,76,132,.28)}
+  .hero h1{font-size:clamp(26px,6.2vw,36px);font-weight:800;line-height:1.32;margin:12px 0 8px}
+  .hero .sub{margin:10px 0 12px;font-size:16px;color:var(--muted)}
+  .hero .year{font-size:13px;color:var(--brand);font-weight:800;margin-bottom:16px}
+
+  /* CTA Buttons – schmäler, konsistent */
+  .hero-cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:12px;font-weight:800;cursor:pointer;transition:transform .15s,box-shadow .15s;min-width:42%;min-height:46px}
+  .btn-primary{background:var(--btnGrad);color:#fff;box-shadow:0 10px 22px rgba(5,76,132,.24),inset 0 1px 0 rgba(255,255,255,.35)}
+  .btn-ghost{background:#fff;color:var(--brand);border:1.5px solid rgba(5,76,132,.22)}
+
+  /* Cards & Typo */
+  h2{font-size:20px;color:var(--brand);margin:0 0 10px}
+  .card{background:var(--card);border-radius:16px;border:1px solid rgba(6,24,64,.10);box-shadow:0 8px 24px rgba(6,24,64,.06);margin-bottom:16px}
+  .card .body{padding:18px}
+  .muted{color:var(--muted)}
+
+  /* ===== Einheitliche moderne Dropdowns (4 Stück) ===== */
+  .accordion{display:grid;gap:10px}
+  details.ac{border:1px solid rgba(6,24,64,.12);border-radius:14px;background:color-mix(in oklab, var(--card) 92%, var(--bg));overflow:hidden}
+  summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:14px 16px;font-weight:800;color:var(--brand)}
+  summary::-webkit-details-marker{display:none}
+  .caret{flex:0 0 18px;height:18px;border-radius:50%;display:grid;place-items:center;background:#e7eef6;color:var(--brand);font-size:12px;font-weight:900;transition:transform .25s ease}
+  details[open] .caret{transform:rotate(90deg)}
+  .ac-content{padding:0 16px 14px 16px}
+  .ac-inner{overflow:hidden;max-height:0;transition:max-height .35s ease}
+  details[open] .ac-inner{max-height:800px}
+  .bullet{display:flex;gap:.6rem;margin:8px 0}
+  .check{flex:0 0 20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font:700 14px/1 "Plus Jakarta Sans"}
+
+  /* Formular */
+  form{display:grid;gap:14px}
+  label{font-weight:800;font-size:14px}
+  input,select,textarea{padding:12px;border-radius:12px;border:1px solid #c8d3df;background:#fff;font:inherit}
+  input:focus,select:focus,textarea:focus{border-color:var(--brand);outline:none;box-shadow:0 0 0 3px rgba(5,76,132,.18)}
+  .agree{display:flex;gap:.6rem;align-items:center;font-size:13px;color:var(--muted)}
+  .agree input{width:18px;height:18px}
+  .submit{display:flex;gap:10px}
+  .submit .btn{flex:1}
+  .hint{font-size:12px;color:#6b7886}
+
+  footer{padding:18px;text-align:center;font-size:13px;color:#677789}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="bg-grid"></div>
+
+  <!-- ===== Header: Vollfläche #054c84, weißes Logo, rechter Link klein ===== -->
+  <header class="header" aria-label="Kopfzeile">
+    <div class="bar">
+      <div class="brand">
+        <div class="logo-badge"><img class="logo" src="https://onecdn.io/media/9a17baaa-c2fc-4c0c-be34-9a2ac3685990/full" alt="Thamke GmbH Logo (weiß)"></div>
+        <div class="loc">Bexbach, Saarland</div>
+      </div>
+      <a class="link-site" href="https://www.thamke.de/" target="_blank" rel="noopener">Zur Website</a>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" aria-label="Hero">
+    <div class="h1-wrap">
+      <div class="slab">JETZT INVESTIEREN!</div>
+    </div>
+    <div class="h1-wrap" style="margin-top:8px">
+      <div class="slab">IN APARTMENTS IN BEXBACH.</div>
+    </div>
+    <p class="sub">Profitabel ab dem 1. Monat · Bereits ab 10.000&nbsp;€ Eigenkapital*</p>
+    <div class="year">Fertigstellung: 2026</div>
+    <div class="hero-cta">
+      <a href="#formular" class="btn btn-primary">Exposé anfordern</a>
+      <a href="tel:+4968269333922" class="btn btn-ghost">Anrufen</a>
+    </div>
+  </section>
+
+  <section class="container">
+    <!-- ===== 4 identische moderne Dropdowns ===== -->
+    <div class="accordion">
+      <details class="ac" open>
+        <summary><span class="caret">›</span> Vorteile</summary>
+        <div class="ac-inner"><div class="ac-content">
+          <div class="bullet"><div class="check">✓</div><div>Regionale Immobilie mit sicherer Miete</div></div>
+          <div class="bullet"><div class="check">✓</div><div>Über 3.600&nbsp;€ Steuervorteil im 1. Jahr</div></div>
+          <div class="bullet"><div class="check">✓</div><div>5&nbsp;% Sonderabschreibung (AfA) möglich</div></div>
+          <div class="bullet"><div class="check">✓</div><div>Abschreibung i. H. v. ca. 9.100&nbsp;€ möglich</div></div>
+          <div class="bullet"><div class="check">✓</div><div>Balkone & Terrassen, helle Räume; barrierefreie EG‑Wohnungen</div></div>
+        </div></div>
+      </details>
+
+      <details class="ac">
+        <summary><span class="caret">›</span> So läuft’s ab</summary>
+        <div class="ac-inner"><div class="ac-content">
+          <p><b>1) Exposé anfordern:</b> Kontaktdaten senden – wir schicken Unterlagen & Beispielrechnung.</p>
+          <p><b>2) Beratung:</b> 15–20 Min. Telefonat/Online‑Termin – Klärung von Zielen, Budget, Finanzierung.</p>
+          <p><b>3) Auswahl & Reservierung:</b> passende Einheit aussuchen, Reservierung/Prüfung der Unterlagen.</p>
+          <p><b>4) Kauf & Betreuung:</b> Notartermin, Begleitung bis Übergabe. Vermietungs‑Support auf Wunsch.</p>
+        </div></div>
+      </details>
+
+      <details class="ac">
+        <summary><span class="caret">›</span> Infos zur Immobilie</summary>
+        <div class="ac-inner"><div class="ac-content">
+          <p><b>Standort:</b> Pfarrer‑Kneipp‑Weg, 66450 Bexbach (Saarland), zentrumsnah, ruhige Sackgasse.</p>
+          <p><b>Wohnungsgrößen (ca.):</b> EG: Whg 1–4 50&nbsp;m², Whg 5 30&nbsp;m² · OG: Whg 6–9 50&nbsp;m², Whg 10 61&nbsp;m².</p>
+          <p><b>Ausstattung:</b> Balkone/Terrassen, helle Räume, moderne Energieversorgung; EG barrierefrei.</p>
+        </div></div>
+      </details>
+
+      <details class="ac">
+        <summary><span class="caret">›</span> Aktueller Baufortschritt</summary>
+        <div class="ac-inner"><div class="ac-content">
+          <p>Die Bauarbeiten laufen – Fertigstellung für <b>2026</b> geplant. Aktuelles Bild/Video einfügen:</p>
+          <img src="REPLACE_WITH_BAUSTELLEN_FOTO.jpg" alt="Baufortschritt" style="border-radius:12px;border:1px solid rgba(6,24,64,.12)">
+        </div></div>
+      </details>
+    </div>
+
+    <!-- ===== Formular – besser leserlich ===== -->
+    <section class="card" id="formular"><div class="body">
+      <h2>Exposé & Beratung anfordern</h2>
+      <form action="YOUR_N8N_WEBHOOK_URL" method="post">
+        <label for="name">Name*</label>
+        <input id="name" name="name" autocomplete="name" required>
+
+        <label for="phone">Telefon*</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+
+        <label for="email">E‑Mail*</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+
+        <label for="exp">Haben Sie bereits Erfahrung mit Immobilieninvestitionen?*</label>
+        <select id="exp" name="experience" required>
+          <option value="">Bitte auswählen</option>
+          <option>Ja, mehr als eine Investition</option>
+          <option>Ja, erste Erfahrungen</option>
+          <option>Nein, ich starte neu</option>
+        </select>
+
+        <label for="plan">Wann planen Sie Ihre Investition?*</label>
+        <select id="plan" name="timeline" required>
+          <option value="">Bitte auswählen</option>
+          <option>sofort / 0–3 Monate</option>
+          <option>3–6 Monate</option>
+          <option>6–12 Monate</option>
+          <option>später / noch offen</option>
+        </select>
+
+        <label for="equity">Wie viel Eigenkapital steht zur Verfügung?*</label>
+        <select id="equity" name="equity" required>
+          <option value="">Bitte auswählen</option>
+          <option>bis 10.000 €</option>
+          <option>10.000–25.000 €</option>
+          <option>25.000–50.000 €</option>
+          <option>über 50.000 €</option>
+        </select>
+
+        <label for="message">Fragen/Notizen</label>
+        <textarea id="message" name="message" rows="3" placeholder="Wann dürfen wir Sie am besten erreichen?"></textarea>
+
+        <div class="agree">
+          <input type="checkbox" id="privacy" required>
+          <label for="privacy">Ich stimme der Verarbeitung meiner Daten gemäß <a href="/datenschutz">Datenschutzerklärung</a> zu.*</label>
+        </div>
+        <div class="agree">
+          <input type="checkbox" id="newsletter" name="newsletter">
+          <label for="newsletter">Ich möchte den Newsletter abonnieren (optional).</label>
+        </div>
+
+        <div class="submit">
+          <button type="submit" class="btn btn-primary">Exposé anfordern</button>
+          <a href="tel:+4968269333922" class="btn btn-ghost">Oder anrufen</a>
+        </div>
+        <p class="hint">* Pflichtfelder. Wir geben Ihre Daten nicht an Dritte weiter.</p>
+      </form>
+    </div></section>
+  </section>
+
+  <footer>
+    © <span id="y"></span> Thamke GmbH · Kleinottweilerstraße 75 · 66450 Bexbach · <a href="/impressum">Impressum</a> · <a href="/datenschutz">Datenschutz</a>
+  </footer>
+</div>
+
+<script>
+  // Jahr setzen
+  document.getElementById('y').textContent=new Date().getFullYear();
+
+  // Smooth-Accordion Animation (öffnen/schließen)
+  document.querySelectorAll('details.ac').forEach(d=>{
+    const inner=d.querySelector('.ac-inner');
+    d.addEventListener('toggle',()=>{
+      if(d.open){
+        const h=inner.scrollHeight;inner.style.maxHeight=h+'px';
+        setTimeout(()=>{inner.style.maxHeight='800px';},300);
+      }else{
+        inner.style.maxHeight=inner.scrollHeight+'px';
+        requestAnimationFrame(()=>{inner.style.maxHeight='0px';});
+      }
+    });
+  });
+</script>
+</body>
+</html>
